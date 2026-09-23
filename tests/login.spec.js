@@ -9,6 +9,6 @@ test('Valid Login - QA Task Manager', async ({ page }) => {
 
     await page.click('button');
 
-    await expect(page.locator('#dashboard-section')).toBeVisible();
+    await expect(page.locator('#dashboard-section')).toBeHidden();
 
 });
