@@ -27,6 +27,9 @@ jobs:
       - name: Install Dependencies
         run: npm ci
 
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps chromium
+
       - name: Run Application
         run: |
           node app/server.js &
@@ -34,3 +37,6 @@ jobs:
 
       - name: Smoke Test
         run: curl -f http://localhost:3000
+
+      - name: Run Playwright Tests
+        run: npm test
