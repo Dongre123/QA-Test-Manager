@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+
+kind: Deployment
+
+metadata:
+  name: qa-task-manager
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: qa-task-manager
+
+  template:
+    metadata:
+      labels:
+        app: qa-task-manager
+
+    spec:
+      containers:
+        - name: qa-task-manager
+          image: qa-task-manager:v1
+          imagePullPolicy: IfNotPresent
+
+          ports:
+            - containerPort: 3000

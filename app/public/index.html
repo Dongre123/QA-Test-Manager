@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>QA Task Manager</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>QA Task Manager</h1>
+
+        <div id="login-section">
+
+            <h2>Login</h2>
+
+            <input
+                type="text"
+                id="username"
+                placeholder="Username"
+            >
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Password"
+            >
+
+            <button onclick="login()">Login</button>
+
+            <p id="login-message"></p>
+
+        </div>
+
+
+        <div id="dashboard-section" style="display: none;">
+
+            <h2>Dashboard</h2>
+
+            <input
+                type="text"
+                id="task-input"
+                placeholder="Enter task"
+            >
+
+            <button onclick="addTask()">Add Task</button>
+
+            <h3>Tasks</h3>
+
+            <ul id="task-list"></ul>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
